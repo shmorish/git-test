@@ -6,13 +6,13 @@
 /*   By: toshota <toshota@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 18:57:01 by toshota           #+#    #+#             */
-/*   Updated: 2024/02/06 18:57:30 by toshota          ###   ########.fr       */
+/*   Updated: 2024/02/06 19:07:53 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-size_t	ft_strlen(char *str)
+static size_t	ft_strlen(char *str)
 {
 	size_t	len;
 
