@@ -27,6 +27,7 @@ int	ft_putnbr(int nb)
 	return (len);
 }
 
+/* check if ft_putnbr(); works correctly */
 // int main(void)
 // {
 // 	__builtin_printf("[%d]", ft_putnbr(100));
