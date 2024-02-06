@@ -21,6 +21,25 @@ int	ft_printf(const char *str, ...)
 	return (result_length);
 }
 
+static int	ft_putchar(char c)
+{
+	return (write(STDOUT_FILENO, &c, 1));
+}
+
+int	ft_puthex(unsigned int hex)
+{
+	int	len;
+
+	len = 0;
+	if (hex >= 16)
+	{
+		len += ft_puthex(hex / 16);
+		len += ft_puthex(hex % 16);
+	}
+	else
+		len += ft_putchar("0123456789abcdef"[hex]);
+	return (len);
+}
 
 int	sort_format(va_list *data, const char format)
 {
@@ -45,6 +64,8 @@ int	sort_format(va_list *data, const char format)
 	// 	len += ft_upper_puthex(va_arg(*data, unsigned int));
 	// if (format == 'b')
 	// 	len += ft_putbinary(va_arg(*data, unsigned int));
+	if (format == 'x')
+		len += ft_puthex(va_arg(*data, unsigned int));
 	if (format == '%')
 		len += write(STDOUT_FILENO, "%", 1);
 	return (len);
