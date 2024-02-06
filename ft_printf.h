@@ -14,5 +14,6 @@ int	sort_format(va_list *data, const char format);
 int	ft_putchar(char c);
 int	ft_putstr(char *s);
 int	ft_putnbr(int nb);
+int	ft_puthex(unsigned int hex);
 
 #endif
