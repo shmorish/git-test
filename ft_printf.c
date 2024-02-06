@@ -64,6 +64,8 @@ int	sort_format(va_list *data, const char format)
 	// 	len += ft_upper_puthex(va_arg(*data, unsigned int));
 	// if (format == 'b')
 	// 	len += ft_putbinary(va_arg(*data, unsigned int));
+	if (format == 'x')
+		len += ft_puthex(va_arg(*data, unsigned int));
 	if (format == '%')
 		len += write(STDOUT_FILENO, "%", 1);
 	return (len);
