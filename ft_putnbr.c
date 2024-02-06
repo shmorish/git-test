@@ -1,10 +1,5 @@
 #include "ft_printf.h"
 
-// static int	ft_putchar(char c)
-// {
-// 	return (write(STDOUT_FILENO, &c, 1));
-// }
-
 int	ft_putnbr(int nb)
 {
 	long	lnb;
